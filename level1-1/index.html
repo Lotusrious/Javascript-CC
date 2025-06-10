@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="hello">안녕하세요</h1>
+    <h1 id="hi">JS 초보에요</h1>
+
+    <script>
+        document.getElementById("hello").innerHTML = "안녕"; //안녕하세요를 안녕으로 바꾸는 스크립트. HTML문서 .(의) 요소(hello인)를 가져와서 안의 내용을 안녕으로 바꿔라. 이 문법을 셀렉터라함.
+        document.getElementById("hello").style.color = "red"; // 응용이 가능. 안녕하세요를 안녕으로 바꾸고 글자색을 빨간색으로 바꾸는 스크립트.
+        document.getElementById("hi").innerHTML = "JS 고수에요"; // 응용이 가능. 초보에요를 초보가 아니라고 바꾸고 글자색을 파란색으로 바꾸는 스크립트.
+        document.getElementById("hello").style.fontSize = "16px"; // 숙제, 안녕의 폰트사이즈를 16px로 줄이는 스크립트.
+        // 왜 이딴식으로 길게 써야 하는가? -> 
+    </script>
+</body>
+</html>
