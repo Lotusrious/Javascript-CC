@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="alert-box" id="alert-box">
+        <p class="title1">기본 알림창</p>
+        <button onclick="closeAlertBox()">닫기</button>
+    </div>
+    <button onclick="openAlertBox('ID를 입력해주세요')">버튼1</button>
+    <button onclick="openAlertBox('비밀번호를 입력해주세요')">버튼2</button>
+
+    <script>
+        /*
+        function openIdBox(){
+            document.getElementById('title').innerHTML = 'ID를 입력해주세요';
+            document.getElementById('alert-box').style.display = 'block';
+        }
+
+        function openPwBox(){
+            document.getElementById('title').innerHTML = '비밀번호를 입력해주세요';
+            document.getElementById('alert-box').style.display = 'block';
+        }
+        */
+
+        function openAlertBox(title){
+            document.getElementsByClassName('title1').innerHTML = title;//id 대신 class 사용
+            document.getElementById('alert-box').style.display = 'block';
+        }
+
+        function closeAlertBox(){
+            document.getElementById('alert-box').style.display = 'none';
+        }
+
+
+
+
+
+        //1. p태그 내용을 아이디입력으로 바꿈
+        //document.getElementById('title').innerHTML = '아이디입력';
+        //2. 띄워줌
+        //document.getElementById('alert-box').style.display = 'block';
+
+
+
+
+    </script>
+</body>
+</html>
