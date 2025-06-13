@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="alert-box" id="alert-box">알림창임</div>
+    <button onclick="openAlertBox('block')">알림창 열기</button>
+    <button onclick="openAlertBox('none')">알림창 닫기</button>
+
+    <script>
+
+        /*
+        function openAlertBox() 
+        {
+            document.getElementById('alert-box').style.display = 'block';
+        }
+        function closeAlertBox() {
+            document.getElementById('alert-box').style.display = 'none';
+        }
+        */
+
+        function openAlertBox(parameter) { // 구멍 자리에, 아무거나 집어넣기가능 
+            document.getElementById('alert-box').style.display = parameter;
+        }
+     
+
+        openAlertBox('block'); // 알림창 열기
+        openAlertBox('none'); // 알림창 닫기
+
+
+        function plus(parameter){
+            return 2 + parameter;
+            console.log(2 + parameter);
+        }
+
+        plus(10); // 12
+
+    </script>
+
+
+</body>
+</html>

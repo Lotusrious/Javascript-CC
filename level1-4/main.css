@@ -1,0 +1,23 @@
+.id-box {
+    background-color: skyblue;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    display: none;
+}
+
+.pw-box {
+    background-color: skyblue;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
