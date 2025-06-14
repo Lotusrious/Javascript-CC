@@ -28,7 +28,7 @@
         */
 
         function openAlertBox(title){
-            document.getElementsByClassName('title1').innerHTML = title;//id 대신 class 사용
+            document.getElementsByClassName('title1')[0].innerHTML = title;//id 대신 class 사용, 인덱싱 [0] 사용해야함 클래스찾을때는, 안그러면 클래스 전체를 찾아버림
             document.getElementById('alert-box').style.display = 'block';
         }
 
