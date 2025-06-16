@@ -1,0 +1,45 @@
+.id-box {
+    background-color: skyblue;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+    display: none;
+}
+
+.pw-box {
+    background-color: skyblue;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    display: none;
+}
+
+.alert-box {
+    background-color: skyblue;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    display: none;
+}
+
+.list-group {
+    display: none;
+}
+
+.list-group.show {
+    display: block;
+}

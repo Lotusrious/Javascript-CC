@@ -36,6 +36,27 @@
             document.getElementById('alert-box').style.display = 'none';
         }
 
+        //addEventListner문법 : HTML 안쓰고 스크립트에서 처리가능
+        //Event란 클릭, 입력, 스크롤, 드래그 등 다 해당.
+        //mouseover : 마우스 올리면 실행
+        //mouseout : 마우스 떼면 실행
+        //mousemove : 마우스 움직이면 실행
+        //mouseup : 마우스 떼면 실행
+        //mousedown : 마우스 누르면 실행
+        //click : 마우스 클릭하면 실행
+        //dblclick : 마우스 더블클릭하면 실행
+        //keydown : 키보드 누르면 실행
+        //keyup : 키보드 떼면 실행
+        //keypress : 키보드 누르고 떼면 실행
+        //input : 입력하면 실행
+        //change : 변경하면 실행
+        //submit : 제출하면 실행
+        //reset : 초기화하면 실행
+        document.getElementById('alert-box').addEventListener('click', function(){
+            document.getElementById('alert-box').style.display = 'none';
+        });
+        //callback함수 : 파라미터 자리에 들어가는 함수, 코드를 순차적으로 실행할 때 가끔보인다.
+
 
 
 
