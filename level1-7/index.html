@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+  <body>
+    <!-- 모달 창 - 하나만 남기고 구조 정리 -->
+    <div class="black-bg">
+        <div class="white-bg">
+          <h4>로그인하세요</h4>
+          <form action="success.html">
+            <div class="my-3">
+              <input type="text" class="form-control" id="user-id">
+             </div>
+             <div class="my-3">
+               <input type="password" class="form-control" id="user-pw">
+             </div>
+             <button type="submit" class="btn btn-primary" id="modal-login-btn">로그인</button>
+             <button type="button" class="btn btn-danger" id="close">닫기</button>
+          </form> 
+        </div>
+    </div> 
+    
+    <div class="container">
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+              <span class="navbar-brand">Navbar</span>
+              <button class="navbar-toggler" type="button">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </nav> 
+          
+          <ul class="list-group">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+            <li class="list-group-item">A fourth item</li>
+            <li class="list-group-item">And a fifth one</li>
+          </ul>
+    
+        <button class="btn btn-primary" id="login-btn">로그인</button>
+    </div>
+
+    <!-- jQuery CDN 추가 - Bootstrap보다 먼저 로드해야 함 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <script>
+        // jQuery 문법으로 변경 - $(document).ready()는 페이지가 로드되면 실행
+        $(document).ready(function(){
+            
+            // 네비게이션 토글 기능 - jQuery 문법
+            $('.navbar-toggler').on('click', function(){
+                $('.list-group').toggleClass('show'); // toggleClass는 jQuery의 클래스 토글 메서드
+            });
+
+            // 로그인 버튼 클릭시 모달 열기 - jQuery 문법
+            $('#login-btn').on('click', function(){
+                $('.black-bg').addClass('show-modal'); // addClass는 클래스를 추가하는 jQuery 메서드
+            });
+            
+            // 닫기 버튼 클릭시 모달 닫기 - jQuery 문법  
+            $('#close').on('click', function(){
+                $('.black-bg').removeClass('show-modal'); // removeClass는 클래스를 제거하는 jQuery 메서드
+            });
+
+            // 로그인 버튼 클릭시 모달 열기 - jQuery 문법
+            $('#modal-login-btn').on('click', function(e){
+                if(document.getElementById('user-id').value === ''){
+                    alert('아이디를 입력해주세요');
+                    e.preventDefault();
+                }
+                if(document.getElementById('user-pw').value === ''){
+                    alert('비밀번호를 입력해주세요');
+                    e.preventDefault();
+                }
+                // 유저의 비밀번호가 6자보다 작으면 알림창 띄워주세요
+                if(document.getElementById('user-pw').value.length < 6){
+                    alert('비밀번호는 6자 이상이어야 합니다');
+                    e.preventDefault();
+                }
+            });
+
+
+        });
+
+       
+
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  </body>
+</html>
